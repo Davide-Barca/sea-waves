@@ -1,4 +1,9 @@
-# Three.js Journey
+# Sea Waves by Davide Barca
+Sea waves scene with glsl shaders
+
+- [GitHub](https://github.com/Davide-Barca/sea-waves.git)
+- [Live]()
+
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
