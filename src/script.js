@@ -23,11 +23,13 @@ scene.fog = new THREE.Fog( 0xa0a0a0, 10, 50);
  * Water
  */
 // Geometry
-const waterGeometry = new THREE.PlaneGeometry(15, 15, 512, 512)
+const waterGeometry = new THREE.PlaneGeometry(10, 10, 1000, 1000)
 
 // Material
-debugObject.depthColor = '#186691'
-debugObject.surfaceColor = '#9bd8ff'
+debugObject.backgoundColor = '#aeadad'
+debugObject.depthColor = '#205a79'
+debugObject.surfaceColor = '#4693c3'
+debugObject.fogColor = '#000'
 
 const waterMaterial = new THREE.ShaderMaterial({
     vertexShader: vertexShader,
@@ -46,8 +48,11 @@ const waterMaterial = new THREE.ShaderMaterial({
         
         uDepthColor: {value: new THREE.Color(debugObject.depthColor)},
         uSurfaceColor: {value: new THREE.Color(debugObject.surfaceColor)},
-        uColorOffset: {value: 0.08},
-        uColorMultiplier: {value: 5}
+        uColorOffset: {value: 0.0},
+        uColorMultiplier: {value: 5},
+
+        uFogColor: {value: new THREE.Color(debugObject.fogColor)},
+        uFogIntensity: {value: 5.5}
     }
 })
 
@@ -67,6 +72,10 @@ gui.addColor(waterMaterial.uniforms.uDepthColor, 'value').name("uDepthColor")/* 
 gui.addColor(waterMaterial.uniforms.uSurfaceColor, 'value').name("uSurfaceColor")/* .onChange((color) => {debugObject.surfaceColor = color}) */
 gui.add(waterMaterial.uniforms.uColorOffset, 'value').min(0).max(2).step(0.01).name("uColorOffset")
 gui.add(waterMaterial.uniforms.uColorMultiplier, 'value').min(0).max(8).step(0.01).name("uColorMultiplier")
+
+gui.addColor(waterMaterial.uniforms.uFogColor, 'value').name("uFogColor")/* .onChange((color) => {debugObject.surfaceColor = color}) */
+gui.add(waterMaterial.uniforms.uFogIntensity, 'value').min(0).max(20).step(0.01).name("uFogIntensity")
+
 
 
 // Mesh
@@ -117,7 +126,11 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-renderer.setClearColor('grey', 1)
+renderer.setClearColor(debugObject.backgoundColor, 1)
+
+// Debug
+gui.addColor(debugObject, 'backgoundColor').name("backgoundColor").onChange(() => {renderer.setClearColor(debugObject.backgoundColor, 1)})
+
 
 /**
  * Animate
