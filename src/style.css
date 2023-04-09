@@ -54,3 +54,10 @@ canvas{
     font-weight: 300;
     color: #fff;
 }
+
+@media screen and (max-width: 600px) {
+    .main div p{
+        padding: 10px;
+        font-size: 2rem;
+    }
+}
