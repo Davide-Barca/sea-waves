@@ -8,7 +8,7 @@ import fragmentShader from './shaders/waterWithFog/fragmentShader.glsl'
  * Base
  */
 // Debug
-const gui = new dat.GUI({ width: 340 })
+const gui = new dat.GUI({ width: 340 }).close()
 const debugObject = {}
 
 // Canvas
