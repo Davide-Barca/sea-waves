@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'lil-gui'
 import vertexShader from './shaders/waterWithFog/vertexShader.glsl'
 import fragmentShader from './shaders/waterWithFog/fragmentShader.glsl'
+import gsap from 'gsap'
 
 /**
  * Base
@@ -136,6 +137,16 @@ gui.addColor(debugObject, 'backgoundColor').name("backgoundColor").onChange(() =
  * Animate
  */
 const clock = new THREE.Clock()
+
+// Slide
+let timeline = gsap.timeline()
+
+timeline
+    .to(".main .slide-1 p", {opacity: 1, duration: 4, delay: 0.5, stagger: 3})
+    .to(".main .slide-1 p", {opacity: 0, duration: 3, delay: 1})
+    .to(".main", {backgroundColor: 'transparent', duration: 5})
+    .to("canvas", {opacity: 1, duration: 5}, "-=4")
+
 
 const tick = () =>
 {
