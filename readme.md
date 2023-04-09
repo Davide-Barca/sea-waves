@@ -3,6 +3,7 @@ Sea waves scene with glsl shaders
 
 - [GitHub](https://github.com/Davide-Barca/sea-waves.git)
 - [Live](https://raging-sea-main.vercel.app/)
+- [Live - Slide Verion](https://raging-sea-slides.vercel.app/)
 
 
 ## Setup
