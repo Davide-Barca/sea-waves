@@ -61,7 +61,8 @@ canvas{
     color: #fff;
 }
 
-.slide-2 p{
+.slide-2 p,
+.slide-3 p{
     color: #a3a3a3 !important;
 }
 

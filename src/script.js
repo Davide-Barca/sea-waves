@@ -156,6 +156,28 @@ timeline
     .to(camera.position, {x: -1, z: -1, duration: 5, ease: "none"})
     .to(".main .slide-2 .have-fun", {opacity: 1, duration: 5}, "-=1")
     .to(controls, {enabled: true}, "-=4")
+    .to(".main .slide-2", {opacity: 0, duration: 5, delay: 10})
+
+    .to(".main .slide-3 .big-waves-elevation", {opacity: 1, duration: 5})
+    .to(waterMaterial.uniforms.uBigWavesElevation, {value: 0.4, duration: 5}, "-=3")
+    .to(waterMaterial.uniforms.uBigWavesElevation, {value: 0.1, duration: 5})
+    .to(waterMaterial.uniforms.uBigWavesElevation, {value: 0.5, duration: 5})
+    .to(".main .slide-3 .big-waves-elevation", {opacity: 0, duration: 5})
+    .to(waterMaterial.uniforms.uBigWavesElevation, {value: 0.2, duration: 5}, "-=4")
+
+    .to(".main .slide-3 .big-waves-frequencyZ", {opacity: 1, duration: 5})
+    .to(waterMaterial.uniforms.uBigWavesFrequency.value, {y: 5.0, duration: 5}, "-=3")
+    .to(waterMaterial.uniforms.uBigWavesFrequency.value, {y: 1.0, duration: 5})
+    .to(waterMaterial.uniforms.uBigWavesFrequency.value, {y: 4.0, duration: 5})
+    .to(".main .slide-3 .big-waves-frequencyZ", {opacity: 0, duration: 5})
+    .to(waterMaterial.uniforms.uBigWavesFrequency.value, {y: 2.0, duration: 5}, "-=4")
+
+    .to(".main .slide-3 .big-waves-frequencyX", {opacity: 1, duration: 5})
+    .to(waterMaterial.uniforms.uBigWavesFrequency.value, {x: 4.0, duration: 5}, "-=3")
+    .to(waterMaterial.uniforms.uBigWavesFrequency.value, {x: 1.0, duration: 5})
+    .to(waterMaterial.uniforms.uBigWavesFrequency.value, {x: 5.0, duration: 5})
+    .to(".main .slide-3 .big-waves-frequencyX", {opacity: 0, duration: 5})
+    .to(waterMaterial.uniforms.uBigWavesFrequency.value, {x: 2.0, duration: 5}, "-=4")
 
 
 const tick = () =>
