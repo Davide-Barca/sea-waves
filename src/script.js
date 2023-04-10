@@ -122,6 +122,7 @@ controls.minDistance = 1
 controls.maxDistance = 2.5
 controls.maxPolarAngle = Math.PI / 2.3
 controls.enabled = false
+controls.enablePan = false
 
 /**
  * Renderer
@@ -153,7 +154,7 @@ timeline
     .to(".main .slide-2 .move",  {opacity: 1, duration: 4, delay: 0.5})
     .to(camera.position, {y: 1.5, x: 0.5, z: -0.5, duration: 5, delay: 1, ease: "none"}, "-=3")
     .to(camera.position, {x: -1, z: -1, duration: 5, ease: "none"})
-    .to(".main .slide-2 .have-fun", {opacity: 1, duration: 5}, "-=4")
+    .to(".main .slide-2 .have-fun", {opacity: 1, duration: 5}, "-=1")
     .to(controls, {enabled: true}, "-=4")
 
 
