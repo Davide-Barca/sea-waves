@@ -9,7 +9,7 @@ import gsap from 'gsap'
  * Base
  */
 // Debug
-const gui = new dat.GUI({ width: 340 }).close()
+// const gui = new dat.GUI({ width: 340 }).close()
 const debugObject = {}
 
 // Canvas
@@ -58,24 +58,24 @@ const waterMaterial = new THREE.ShaderMaterial({
 })
 
 // Debug
-gui.add(waterMaterial.uniforms.uBigWavesSpeed, 'value').min(0).max(5).step(0.01).name("uBigWavesSpeed")
-gui.add(waterMaterial.uniforms.uBigWavesElevation, 'value').min(0).max(1).step(0.01).name("uBigWavesElevation")
-gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'y').min(0).max(20).step(0.01).name("uBigWavesFrequencyZ")
-gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'x').min(0).max(20).step(0.01).name("uBigWavesFrequencyX")
+// gui.add(waterMaterial.uniforms.uBigWavesSpeed, 'value').min(0).max(5).step(0.01).name("uBigWavesSpeed")
+// gui.add(waterMaterial.uniforms.uBigWavesElevation, 'value').min(0).max(1).step(0.01).name("uBigWavesElevation")
+// gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'y').min(0).max(20).step(0.01).name("uBigWavesFrequencyZ")
+// gui.add(waterMaterial.uniforms.uBigWavesFrequency.value, 'x').min(0).max(20).step(0.01).name("uBigWavesFrequencyX")
 
-gui.add(waterMaterial.uniforms.uSmallWavesSpeed, 'value').min(0).max(5).step(0.01).name("uSmallWavesSpeed")
-gui.add(waterMaterial.uniforms.uSmallWavesElevation, 'value').min(0).max(1).step(0.01).name("uSmallWavesElevation")
-gui.add(waterMaterial.uniforms.uSmallWavesFrequency, 'value').min(0).max(20).step(0.01).name("uSmallWavesFrequency")
-gui.add(waterMaterial.uniforms.uSmallWavesIterations, 'value').min(0).max(5).step(1).name("uSmallWavesIterations")
+// gui.add(waterMaterial.uniforms.uSmallWavesSpeed, 'value').min(0).max(5).step(0.01).name("uSmallWavesSpeed")
+// gui.add(waterMaterial.uniforms.uSmallWavesElevation, 'value').min(0).max(1).step(0.01).name("uSmallWavesElevation")
+// gui.add(waterMaterial.uniforms.uSmallWavesFrequency, 'value').min(0).max(20).step(0.01).name("uSmallWavesFrequency")
+// gui.add(waterMaterial.uniforms.uSmallWavesIterations, 'value').min(0).max(5).step(1).name("uSmallWavesIterations")
 
 
-gui.addColor(waterMaterial.uniforms.uDepthColor, 'value').name("uDepthColor")/* .onChange((color) => {debugObject.depthColor = color}) */
-gui.addColor(waterMaterial.uniforms.uSurfaceColor, 'value').name("uSurfaceColor")/* .onChange((color) => {debugObject.surfaceColor = color}) */
-gui.add(waterMaterial.uniforms.uColorOffset, 'value').min(0).max(2).step(0.01).name("uColorOffset")
-gui.add(waterMaterial.uniforms.uColorMultiplier, 'value').min(0).max(8).step(0.01).name("uColorMultiplier")
+// gui.addColor(waterMaterial.uniforms.uDepthColor, 'value').name("uDepthColor")/* .onChange((color) => {debugObject.depthColor = color}) */
+// gui.addColor(waterMaterial.uniforms.uSurfaceColor, 'value').name("uSurfaceColor")/* .onChange((color) => {debugObject.surfaceColor = color}) */
+// gui.add(waterMaterial.uniforms.uColorOffset, 'value').min(0).max(2).step(0.01).name("uColorOffset")
+// gui.add(waterMaterial.uniforms.uColorMultiplier, 'value').min(0).max(8).step(0.01).name("uColorMultiplier")
 
-gui.addColor(waterMaterial.uniforms.uFogColor, 'value').name("uFogColor")/* .onChange((color) => {debugObject.surfaceColor = color}) */
-gui.add(waterMaterial.uniforms.uFogIntensity, 'value').min(0).max(20).step(0.01).name("uFogIntensity")
+// gui.addColor(waterMaterial.uniforms.uFogColor, 'value').name("uFogColor")/* .onChange((color) => {debugObject.surfaceColor = color}) */
+// gui.add(waterMaterial.uniforms.uFogIntensity, 'value').min(0).max(20).step(0.01).name("uFogIntensity")
 
 
 
@@ -135,7 +135,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.setClearColor(debugObject.backgoundColor, 1)
 
 // Debug
-gui.addColor(debugObject, 'backgoundColor').name("backgoundColor").onChange(() => {renderer.setClearColor(debugObject.backgoundColor, 1)})
+// gui.addColor(debugObject, 'backgoundColor').name("backgoundColor").onChange(() => {renderer.setClearColor(debugObject.backgoundColor, 1)})
 
 
 /**
