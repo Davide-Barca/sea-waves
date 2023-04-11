@@ -179,6 +179,14 @@ timeline
     .to(".main .slide-3 .big-waves-frequencyX", {opacity: 0, duration: 5})
     .to(waterMaterial.uniforms.uBigWavesFrequency.value, {x: 2.0, duration: 5}, "-=4")
 
+    .to("canvas", {opacity: 0, duration: 5})
+    .to(".main", {backgroundColor: 'black', duration: 5}, "-=3")
+
+    .to(".main .slide-6 p", {opacity: 1, duration: 4, delay: 0.5})
+    .to(".main .slide-6 .repository-link li", {opacity: 1, pointerEvents: "all", duration:3, stagger:1}, "-=3")
+
+
+
 
 const tick = () =>
 {

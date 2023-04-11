@@ -51,7 +51,8 @@ canvas{
     z-index: 1;
 }
 
-.main div p{
+.main div p,
+.main .slide-6 ul li{
     opacity: 0;
     padding: 10px;
     text-align: center;
@@ -59,6 +60,42 @@ canvas{
     letter-spacing: 5px;
     font-weight: 300;
     color: #fff;
+}
+
+li{
+    text-align: left !important;
+    padding: 0;
+    
+}
+
+li:hover{
+    transform: translateX(10px);
+    transition: all 1s;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.main div p a{
+    text-decoration: none;
+    color: #a3a3a3;
+    pointer-events: all !important;
+    border: 1px solid #a3a3a3;
+    padding: 4px 10px;
+    text-transform: uppercase;
+}
+
+.main .slide-6 p:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.main .slide-6 p:hover a{
+    transition: all 1s;
+    color: #fff;
+    border-color: #fff;
 }
 
 .slide-2 p,
